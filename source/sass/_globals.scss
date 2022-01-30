@@ -1,0 +1,89 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-body {
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  color: $blueshgray;
+}
+
+.wrapper {
+  @media (min-width: $desktop) {
+    width: 1360px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.container {
+  width: 288px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: 688px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 616px;
+    margin: 0 49px;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.small-title {
+  text-transform: uppercase;
+  @include font ('Rajdhani-Bold', 16px, 700, 24px);
+}
+
+.title {
+  @include font ('Rajdhani-Medium', 24px, 500, 32px);
+  color: $violet;
+}

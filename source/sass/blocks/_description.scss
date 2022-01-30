@@ -1,0 +1,51 @@
+.description {
+  padding-top: 8px;
+
+  @media (min-width: $desktop) {
+    padding-top: 80px;
+  }
+
+  .description__title {
+    padding: 16px 0 16px 0;
+    @include font ('Rajdhani-Medium', 32px, 500, 32px);
+    color: $violet;
+
+    @media (min-width: $tablet) {
+      @include font ('Rajdhani-Medium', 48px, 500, 56px);
+    }
+
+    @media (min-width: $desktop) {
+      padding: 24px 0 14px 0;
+    }
+  }
+
+  .description__subtittle {
+    padding: 0 15px 16px 0;
+    @include font ('Rajdhani-Medium', 18px, 500, 28px);
+    opacity: 0.8;
+
+    @media (min-width: $tablet) {
+      @include font ('Rajdhani-Medium', 20px, 500, 32px);
+      padding: 0 60px 4px 0;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 0 230px 10px 0;
+    }
+  }
+
+  &::after {
+    @include pseudo (block, absolute, "");
+    width: 288px;
+    height: 1px;
+    background-color: $lightgray;
+
+    @media (min-width: $tablet) {
+      width: 688px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 616px;
+    }
+  }
+}

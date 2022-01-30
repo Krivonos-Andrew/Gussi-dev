@@ -1,0 +1,167 @@
+.newsletter {
+  padding-bottom: 16px;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 29px;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 0;
+  }
+
+  .newsletter__title {
+    padding-bottom: 8px;
+
+    @media (min-width: $tablet) {
+      padding: 0;
+    }
+
+    @media (min-width: $tablet) {
+      @include font ('Rajdhani-Medium', 32px, 500, 40px);
+    }
+  }
+
+  .newsletter__subtitle {
+    @include font ('Rajdhani-Medium', 18px, 500, 28px);
+    opacity: 0.8;
+    padding: 0 30px 28px 0;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 24px;
+      @include font ('Rajdhani-Medium', 20px, 500, 32px);
+    }
+  }
+
+  .newsletter__date {
+    width: 288px;
+    height: 44px;
+    padding-left: 16px;
+    margin-bottom: 16px;
+    @include font ('Rajdhani-Medium', 16px, 500, 40px);
+    border: none;
+    background-color: $lightgray;
+
+    @media (min-width: $tablet) {
+      width: 456px;
+    }
+  }
+
+  .newsletter__form .newsletter__date:nth-child(4) {
+    margin-bottom: 12px;
+  }
+
+  .newsletter__gender {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 34px;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 0;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-bottom: 0;
+      margin-bottom: 40px;
+    }
+  }
+
+  .newsletter__gender-title {
+    width: 100%;
+    padding-bottom: 8px;
+    @include font ('Rajdhani-Medium', 20px, 500, 32px);
+    opacity: 0.8;
+
+    @media (min-width: $tablet) {
+      width: max-content;
+    }
+
+    @media (min-width: $desktop) {
+      padding-bottom: 0;
+    }
+  }
+
+  .newsletter__gender .newsletter__label:nth-child(2) {
+    padding-left: 28px;
+
+    @media (min-width: $tablet) {
+      padding-left: 52px;
+    }
+  }
+
+  .newsletter__gender .newsletter__label:nth-child(3) {
+    padding-left: 48px;
+  }
+
+  .newsletter__sex {
+    position: absolute;
+    margin-left: -26px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $lightgray;
+    border-radius: 50%;
+  }
+
+  .newsletter__label {
+    cursor: pointer;
+  }
+
+  .newsletter__input:checked+.newsletter__sex::before {
+    @include pseudo (block, absolute, "");
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $violet;
+    transform: translate(25%, 25%);
+  }
+
+  .newsletter__input {
+    appearance: none;
+    position: absolute;
+  }
+}
+
+.newsletter__box {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-left: -28px;
+  background-repeat: no-repeat;
+  background-image: url(../img/check.svg);
+}
+
+.newsletter__check {
+  display: flex;
+  padding-left: 28px;
+  cursor: pointer;
+}
+
+.newsletter__check-text {
+  padding-bottom: 16px;
+  @include font ('Rajdhani-Medium', 16px, 500, 24px);
+  color: $violet;
+  opacity: 0.8;
+
+  @media (min-width: $tablet) {
+    padding-bottom: 17px;
+  }
+}
+
+.newsletter__input:checked+.newsletter__box::before {
+  @include pseudo (block, absolute, "");
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/checked.svg);
+  background-repeat: no-repeat;
+}
+
+.newsletter__input:disabled+.newsletter__box::before {
+  @include pseudo (block, absolute, "");
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/check-dis.svg);
+  background-repeat: no-repeat;
+}

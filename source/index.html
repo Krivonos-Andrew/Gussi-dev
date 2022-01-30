@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>New collection</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/Rajdhani-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/Rajdhani-Medium.woff2" as="font">
+  <link rel="preload" href="fonts/Rajdhani-Regular.woff2" as="font">
+
+</head>
+
+<body class="page-body">
+  <div class="wrapper">
+    <h1 class="visually-hidden">New collection</h1>
+    <div class="flex-wrapper">
+
+      <div class="slider-wrapper">
+        <div class="slider__logo">
+          <picture>
+            <source srcset="img/logo.svg" type="image/svg+xml" media="(min-width: 1360px)">
+            <source srcset="img/logo.svg" type="image/svg+xml" media="(min-width: 720px)">
+            <img src="img/logo.svg" width="65" height="36" alt="logo Gussi">
+          </picture>
+        </div>
+        <div class="slide active fade">
+          <div class="slide__numbertext">01 &#8212;&#8212; <span class="slide__numbertext-opacity"> 03</span> </div>
+          <div class="slide__text">
+            <h2>Light coat</h2>
+            <p>More cotton, more freedom</p>
+          </div>
+          <div class="slide__foto">
+            <picture>
+              <source type="image/webp" media="(min-width: 1360px)" srcset="img/image1.webp 1x, img/image1-2x.webp 2x">
+              <source type="image/webp" media="(min-width: 720px)" srcset="img/image1.webp 1x, img/image1-2x.webp 2x">
+              <source type="image/webp" srcset="img/image1.webp 1x, img/image1-2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/image1.png 1x, img/image1-2x.png 2x">
+              <source media="(min-width: 720px)" srcset="img/image1.png 1x, img/image1-2x.png 2x">
+              <img src="img/image1.png" srcset="img/image1-2x.png" width="320" alt="Light coat">
+            </picture>
+          </div>
+
+        </div>
+        <div class="slide fade">
+          <div class="slide__numbertext">01 &#8212;&#8212; <span class="slide__numbertext-opacity"> 03</span> </div>
+          <div class="slide__text">
+            <h2>Sandy longsleeve</h2>
+            <p>More cotton, more freedom</p>
+          </div>
+          <div class="slide__foto slide__foto--tablet">
+            <picture>
+              <source type="image/webp" media="(min-width: 1360px)" srcset="img/image2.webp 1x, img/image2-2x.webp 2x">
+              <source type="image/webp" media="(min-width: 720px)" srcset="img/image2.webp 1x, img/image2-2x.webp 2x">
+              <source type="image/webp" srcset="img/image2.webp 1x, img/image2-2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/image2.png 1x, img/image2-2x.png 2x">
+              <source media="(min-width: 720px)" srcset="img/image2.png 1x, img/image2-2x.png 2x">
+              <img src="img/image2.png" srcset="img/image2-2x.png" width="320" height="600" alt="Sandy longsleeve">
+            </picture>
+          </div>
+
+        </div>
+        <div class="slide fade">
+          <div class="slide__numbertext">03 &#8212;&#8212; <span class="slide__numbertext-opacity"> 03</span> </div>
+          <div class="slide__text">
+            <h2>Lime jacket</h2>
+            <p>More cotton, more freedom</p>
+          </div>
+          <div class="slide__foto slide__foto--pink">
+            <picture>
+              <source type="image/webp" media="(min-width: 1360px)" srcset="img/image3.webp 1x, img/image3-2x.webp 2x">
+              <source type="image/webp" media="(min-width: 720px)" srcset="img/image3.webp 1x, img/image3-2x.webp 2x">
+              <source type="image/webp" srcset="img/image3.webp 1x, img/image3-2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/image3.png 1x, img/image3-2x.png 2x">
+              <source media="(min-width: 720px)" srcset="img/image3.png 1x, img/image3-2x.png 2x">
+              <img src="img/image3.png" srcset="img/image3-2x.png" width="320" height="600" alt="Lime jacket">
+            </picture>
+          </div>
+        </div>
+        <div class="btn-prev"></div>
+        <div class="btn-next"></div>
+      </div>
+
+
+    </div>
+
+    <div class="content">
+      <form class="form-order container" action="" method="post">
+        <div class="description">
+          <h3 class="small-title">New collection</h3>
+          <h2 class="description__title">Gussi light coat</h2>
+          <p class="description__subtittle subtitle">It takes you from the party to the
+            after party with its fashion-forward
+            styles. A playfull blend of retro and
+            modern outdoor design.</p>
+        </div>
+        <div class="choice">
+          <div class="choice__color">
+            <h3 class="choice__color-text small-title">colour</h3>
+            <label><input class="choice__color-input" type="radio" name="color" checked><span class="choice__color-radio choice__color-radio--violet"></span></label>
+            <label><input class="choice__color-input" type="radio" name="color"><span class="choice__color-radio choice__color-radio--blueshgray"></span></label>
+            <label><input class="choice__color-input" type="radio" name="color"><span class="choice__color-radio choice__color-radio--gray"></span></label>
+
+          </div>
+          <div class="choice__size">
+            <h3 class="choice__size-text small-title">size</h3>
+            <label class="choice__size-label"><input class="choice__size-input" type="radio" name="size"> <span class="choice__size-radio">XS</span> </label>
+            <label class="choice__size-label"> <input class="choice__size-input" type="radio" name="size" checked> <span class="choice__size-radio">S</span> </label>
+            <label class="choice__size-label"> <input class="choice__size-input" type="radio" name="size"> <span class="choice__size-radio">M</span> </label>
+            <label class="choice__size-label"> <input class="choice__size-input" type="radio" name="size"> <span class="choice__size-radio">L</span> </label>
+
+          </div>
+          <div class="guide">
+            <a href="#" class="guide__link">Size guide</a>
+          </div>
+
+          <div class="choice__quantity counter">
+            <h3 class="counter__title small-title">Quantity</h3>
+            <label class="counter__btn minus" data-direction="minus"><input class="counter__input" type="button"></label>
+            <input class="counter__value" type="text" value="1">
+            <label class="counter__btn plus" data-direction="plus"><input class="counter__input " type="button"></label>
+
+          </div>
+          <div class="choice__cost">
+            <h3 class="small-title">cost</h3>
+            <p><span class="copyright">120</span><span class="cent">.00</span> </p>
+          </div>
+        </div>
+        <div class="details">
+          <h3 class="details__title small-title">PRODUCT DETAILS</h3>
+          <p class="details__subtitle">Look out for its standout party dresses, feminine details, statement jackets and cool denim including skinny-cut jeans and cute denim shorts, which sit alongside its directional footwear and swimwear ranges.</p>
+          <span class="details__subtitle-comment">63% Viscose, 37% Polyamide.</span>
+        </div>
+        <button class="btn title" type="submit">Order now</button>
+        <div class="services">
+          <h2 class="services__title title">Delivery</h2>
+          <div class="services__menu"></div>
+          <p class="services__subtitle">Delivered on or before Monday, 25 February 2019
+            Note: Subject to placing your order before specific cut-off times. Details available in checkout. <span class="services__ps">For free delivery – spend over £18.08</span></p>
+        </div>
+        <div class="services services--return">
+          <h2 class="services__title title">Return</h2>
+          <div class="services__menu"></div>
+          <p class="services__subtitle">Return through your local Boxberry store available in over 2,300 locations.
+            You can create your return on the carrier website by clicking the create return link.
+            Open 7 days a week, early until late.</p>
+        </div>
+      </form>
+
+      <div class="similar container">
+        <h3 class="similar__title small-title">Similar Collections</h3>
+        <div class="similar__picture">
+          <a class="similar__link" href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 1360px)" srcset="img/frame-mobile.webp 1x, img/frame-mobile2x.webp 2x">
+              <source type="image/webp" media="(min-width: 720px)" srcset="img/frame-tablet.webp 1x, img/frame-tablet2x.webp 2x">
+              <source type="image/webp" srcset="img/frame-mobile.webp 1x, img/frame-mobile2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/frame-mobile.png 1x, img/frame-mobile2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/frame-tablet.png 1x, img/frame-tablet2x.png 2x">
+              <img src="img/frame-mobile.png" srcset="img/frame-mobile2x.png 2x" alt="Kingsman style">
+            </picture>
+          </a>
+          <a class="similar__link" href="#">
+            <picture>
+              <source type="image/webp" media="(min-width: 1360px)" srcset="img/2frame-mobile.webp 1x, img/2frame-mobile2x.webp 2x">
+              <source type="image/webp" media="(min-width: 720px)" srcset="img/2frame-tablet.webp 1x, img/2frame-tablet2x.webp 2x">
+              <source type="image/webp" srcset="img/2frame-mobile.webp 1x, img/2frame-mobile2x.webp 2x">
+              <source media="(min-width: 1200px)" srcset="img/2frame-mobile.png 1x, img/2frame-mobile2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/2frame-tablet.png 1x, img/2frame-tablet2x.png 2x">
+              <img src="img/2frame-mobile.png" srcset="img/2frame-mobile2x.png 2x" alt="Denim goddess">
+            </picture>
+          </a></div>
+
+      </div>
+      <div class="newsletter container">
+        <form class="newsletter__form" action="#" method="post">
+          <h2 class="newsletter__title title">Subscribe our newsletter</h2>
+          <p class="newsletter__subtitle">Get notified about new collections
+            of Gussi Store</p>
+          <input class="newsletter__date name" type="text" name="textfield" placeholder="Enter your name">
+          <input class="newsletter__date mail" type="email" name="mailfield" placeholder="Enter your e-mail">
+          <div class="newsletter__gender ">
+            <h3 class="newsletter__gender-title">Choose your gender:</h3>
+            <label class="newsletter__label"><input class="newsletter__input" type="radio" name="sex" checked><span class="newsletter__sex"></span>Male</label>
+            <label class="newsletter__label"><input class="newsletter__input" type="radio" name="sex"><span class="newsletter__sex"></span>Female</label>
+          </div>
+
+          <label class="newsletter__check"><input class="newsletter__input" type="checkbox" name="checkbox" checked><span class="newsletter__box"></span> <span class="newsletter__check-text">Look out for its standout party dresses,
+              feminine details</span> </label>
+          <button class="btn title" type="submit">Subscribe Gussi</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

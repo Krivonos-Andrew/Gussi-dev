@@ -1,0 +1,31 @@
+@mixin center {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin font ($font, $size, $weight, $lh) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lh;
+  font-family: $font;
+}
+
+
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  position: $pos;
+  display: $display;
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}

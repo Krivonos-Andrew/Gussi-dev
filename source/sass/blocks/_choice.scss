@@ -1,0 +1,314 @@
+.choice {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 16px 0 20px 0;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 220px 1fr 1fr;
+    padding: 24px 0 17px 0;
+    row-gap: 38px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: 160px 198px auto;
+    padding: 16px 0 20px 0;
+    row-gap: 30px;
+  }
+
+  .choice__color {
+    grid-column: span 2;
+
+    @media (min-width: $tablet) {
+      grid-column: span 1;
+    }
+
+    .choice__color-text {
+      padding-bottom: 12px;
+    }
+
+    .choice__color-input {
+      appearance: none;
+      position: absolute;
+    }
+
+    .choice__color-radio {
+      display: inline-flex;
+      position: relative;
+      margin: 0 6px 0 3px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+
+      @media (min-width:$tablet) {
+        margin: 0 5px 0 3px;
+      }
+
+      @media (min-width:$desktop) {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    .choice__color-input:checked+.choice__color-radio::before {
+      @include pseudo (block, absolute, "");
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      top: -4px;
+      left: -4px;
+      border: 1px solid;
+
+      @media (min-width:$desktop) {
+        width: 32px;
+        height: 32px;
+        top: -3px;
+        left: -3px;
+      }
+    }
+
+    .choice__color-input:checked+.choice__color-radio--violet::before {
+      border-color: $violet;
+    }
+
+    .choice__color-input:checked+.choice__color-radio--blueshgray {
+      border-color: $blueshgray;
+    }
+
+    .choice__color-input:checked+.choice__color-radio--gray::before {
+      border-color: $gray;
+    }
+
+    .choice__color-radio--violet {
+      background-color: $violet;
+    }
+
+    .choice__color-radio--blueshgray {
+      background-color: $blueshgray;
+    }
+
+    .choice__color-radio--gray {
+      background-color: $gray;
+    }
+  }
+
+  .choice__size {
+    width: 100%;
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: -40px;
+
+    @media (min-width: $tablet) {
+      margin-left: -25px;
+      grid-column: span 1;
+    }
+
+    .choice__size-text {
+      width: 100%;
+      padding: 25px 0 10px 0;
+      margin-left: 40px;
+      grid-column: span 4;
+      flex-grow: 1;
+
+      @media (min-width: $tablet) {
+        padding: 2px 0 0 0;
+        margin-left: 25px;
+      }
+
+      @media (min-width: $desktop) {
+        padding: 0 0 7px 0;
+      }
+    }
+
+    .choice__size-input {
+      appearance: none;
+      position: absolute;
+    }
+
+    .choice__size-radio {
+      position: relative;
+      display: flex;
+      padding-right: 20px;
+      width: 48px;
+      height: 48px;
+      justify-content: center;
+      @include font ('Rajdhani-Medium', 20px, 500, 24px);
+      color: $blueshgray;
+      cursor: pointer;
+
+      @media (min-width: $tablet) {
+        margin-right: 5px;
+        padding: 8px 0 0 0;
+      }
+
+      @media (min-width: $desktop) {
+        @include font ('Rajdhani-Medium', 16px, 500, 24px);
+        width: 32px;
+        height: 32px;
+        padding: 5px 0 0 5px;
+      }
+    }
+
+    .choice__size-input:checked+.choice__size-radio {
+      @include font ('Rajdhani-Medium', 32px, 500, 24px);
+      color: $violet;
+
+      @media (min-width: $desktop) {
+        @include font ('Rajdhani-Bold', 20px, 700, 24px);
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    .choice__size-input:hover+.choice__size-radio::before {
+      @include pseudo (block, absolute, "");
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid $blueshgray;
+      transform: translate(0, -25%);
+
+      @media (min-width: $desktop) {
+        width: 32px;
+        height: 32px;
+        transform: translate(0, -15%);
+      }
+    }
+
+    .choice__size-input:checked+.choice__size-radio::before {
+      @include pseudo (block, absolute, "");
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid $violet;
+      transform: translate(0, -25%);
+
+      @media (min-width: $desktop) {
+        width: 32px;
+        height: 32px;
+        transform: translate(0, -15%);
+      }
+    }
+  }
+
+  .guide {
+    width: 100%;
+    grid-column: span 2;
+    padding: 15px 0 32px 0;
+
+    @media (min-width: $tablet) {
+      grid-column: span 1;
+      padding: 35px 0 0 25px;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 37px 0 0 0;
+    }
+
+    .guide__link {
+      width: 92px;
+      height: 28px;
+      padding: 2px 13px 2px 12px;
+      border: 1px solid $sandy;
+      border-radius: 24px;
+      @include font ('Rajdhani-Medium', 16px, 500, 24px);
+      color: $sandy;
+    }
+  }
+
+  .choice__quantity {
+    @media (min-width: $tablet) {
+      grid-column: span 1;
+      margin-top: -5px;
+    }
+  }
+
+  .choice__cost {
+    padding: 2px 0 0 10px;
+
+    @media (min-width: $tablet) {
+      grid-column: span 1;
+      padding: 0;
+    }
+  }
+}
+
+.copyright {
+  display: inline-block;
+  margin-top: 5px;
+  @include font ('Rajdhani-Medium', 40px, 500, 40px);
+  color: $sandy;
+
+  @media (min-width: $desktop) {
+    margin: 5px 2px 0 0;
+
+  }
+}
+
+.copyright::before {
+  content: '\0024';
+}
+
+.cent {
+  @include font ('Rajdhani-Medium', 28px, 500, 40px);
+}
+
+.details {
+  padding-bottom: 38px;
+
+  @media (min-width: $desktop) {
+    padding-bottom: 48px;
+  }
+
+  &::before {
+    @include pseudo;
+    width: 288px;
+    height: 1px;
+    background-color: $lightgray;
+
+    @media (min-width: $tablet) {
+      width: 688px;
+    }
+
+    @media (min-width: $desktop) {
+      width: 616px;
+    }
+  }
+
+  .details__title {
+    padding: 28px 0 8px 0;
+
+    @media (min-width: $tablet) {
+      padding: 18px 0 8px 0;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 25px 0 8px 0;
+    }
+  }
+
+  .details__subtitle {
+    @include font ('Rajdhani-Medium', 16px, 500, 24px);
+    opacity: 0.8;
+
+    @media (min-width: $tablet) {
+      padding-right: 20px;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 0 10px 8px 0;
+    }
+  }
+
+  .details__subtitle-comment {
+    display: block;
+    padding-top: 10px;
+    @include font ('Rajdhani-Medium', 16px, 500, 20px);
+
+    @media (min-width:$desktop) {
+      padding: 0;
+    }
+  }
+}

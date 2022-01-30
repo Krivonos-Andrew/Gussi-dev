@@ -1,0 +1,49 @@
+.counter {
+  width: 78px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .counter__btn {
+    width: 16px;
+    height: 16px;
+    border: none;
+    display: block;
+    background-color: $white;
+    position: relative;
+  }
+
+  .counter__btn:hover:before {
+    @include pseudo;
+    width: 28px;
+    height: 28px;
+    border: 1px solid $lightgray;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .counter__input {
+    appearance: none;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .minus {
+    background-image: url(../img/minus.svg);
+  }
+
+  .counter__value {
+    width: 46px;
+    display: flex;
+    text-align: center;
+    @include font ('Rajdhani-Regular', 24px, 500, 24px);
+    color: $blueshgray;
+    border: none;
+  }
+
+  .plus {
+    background-image: url(../img/plus.svg);
+  }
+}
